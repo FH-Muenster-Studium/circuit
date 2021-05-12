@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Series.hpp"
 #include "Parallel.hpp"
 #include "Resistance.hpp"

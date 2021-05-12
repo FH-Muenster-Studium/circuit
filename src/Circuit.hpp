@@ -12,8 +12,8 @@ class Circuit : public Component {
 protected:
     std::vector<Component> components;
 public:
-    Circuit(std::string name);
-    void add_component(Component component);
+    explicit Circuit(const std::string& name);
+    void add_component(const Component& component);
     void print();
 };
 
