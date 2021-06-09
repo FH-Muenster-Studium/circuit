@@ -1,17 +1,21 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
-#ifndef PRAKTIKUM_2_PARALLEL_HPP
-#define PRAKTIKUM_2_PARALLEL_HPP
+#pragma once
 
 #include "Circuit.hpp"
 
+/**
+ * Parallel Circuit
+ */
 class Parallel : public Circuit {
 public:
+    /**
+     * Creates a Parallel Circuit
+     */
     Parallel();
+
+    /**
+     * Get the resistance of the parallel circuit.
+     *
+     * @return the resistance of the parallel circuit.
+     */
     [[nodiscard]] double get_resistance() const override;
 };
-
-
-#endif //PRAKTIKUM_2_PARALLEL_HPP

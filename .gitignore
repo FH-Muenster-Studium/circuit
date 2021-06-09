@@ -1,0 +1,4 @@
+docs/*.exe
+docs/*.dll
+cmake-build-debug
+.idea

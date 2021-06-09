@@ -1,9 +1,12 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
 #include "Resistance.hpp"
 
-Resistance::Resistance(double resistance): Component("Resistance", resistance) {
+Resistance::Resistance(double resistance): Component("Resistance") {
+    if (resistance < 0) {
+        throw InvalidResistanceException();
+    }
+    this->resistance = resistance;
+}
 
+double Resistance::get_resistance() const {
+    return this->resistance;
 }

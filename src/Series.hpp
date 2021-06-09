@@ -1,17 +1,21 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
-#ifndef PRAKTIKUM_2_SERIES_HPP
-#define PRAKTIKUM_2_SERIES_HPP
+#pragma once
 
 #include "Circuit.hpp"
 
+/**
+ * Series Circuit
+ */
 class Series : public Circuit {
 public:
+    /**
+     * Create a Series Circuit
+     */
     Series();
+
+    /**
+     * Get the resistance of the Series Circuit.
+     *
+     * @return the resistance of the Series Circuit.
+     */
     [[nodiscard]] double get_resistance() const override;
 };
-
-
-#endif //PRAKTIKUM_2_SERIES_HPP

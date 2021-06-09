@@ -1,16 +1,24 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
-#ifndef PRAKTIKUM_2_RESISTANCE_HPP
-#define PRAKTIKUM_2_RESISTANCE_HPP
+#pragma once
 
 #include "Component.hpp"
+#include "InvalidResistanceException.hpp"
 
+/**
+ * Resistance Component that has a name and a final resistance
+ */
 class Resistance : public Component {
+private:
+    double resistance;
 public:
+    /**
+     * Create a Resistance Component
+     */
     explicit Resistance(double resistance);
+
+    /**
+     * Get the resistance of the Resistance component.
+     *
+     * @return the resistance of the Resistance component.
+     */
+    [[nodiscard]] double get_resistance() const override;
 };
-
-
-#endif //PRAKTIKUM_2_RESISTANCE_HPP

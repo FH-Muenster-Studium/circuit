@@ -1,0 +1,103 @@
+\hypertarget{classCircuit}{}\doxysection{Circuit Class Reference}
+\label{classCircuit}\index{Circuit@{Circuit}}
+
+
+{\ttfamily \#include $<$Circuit.\+hpp$>$}
+
+Inheritance diagram for Circuit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCircuit}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCircuit_afde548bd1c51ee29303e502627f50b78}{Circuit}} (const std\+::string \&\mbox{\hyperlink{classComponent_a46343549452bda5ee9752f7a9bc15efb}{name}})
+\item 
+void \mbox{\hyperlink{classCircuit_a307b264bb0109505cc1dad1a95028ded}{add\+\_\+component}} (const \mbox{\hyperlink{classComponent}{Component}} \&component)
+\item 
+void \mbox{\hyperlink{classCircuit_ae8ecee4c5943d30b6e9219c3f81b73a9}{print}} ()
+\item 
+double \mbox{\hyperlink{classCircuit_ab624dff467c61f983c56ca77da2516f6}{get\+\_\+resistance}} () const override=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classComponent}{Component}} $\ast$ $>$ \mbox{\hyperlink{classCircuit_a6ab377573021bfb7ae4da62c4457eea8}{components}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCircuit}{Circuit}} that contains a list of components. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCircuit_afde548bd1c51ee29303e502627f50b78}\label{classCircuit_afde548bd1c51ee29303e502627f50b78}} 
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{Circuit()}{Circuit()}}
+{\footnotesize\ttfamily Circuit\+::\+Circuit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a circuit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the circuit. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCircuit_a307b264bb0109505cc1dad1a95028ded}\label{classCircuit_a307b264bb0109505cc1dad1a95028ded}} 
+\index{Circuit@{Circuit}!add\_component@{add\_component}}
+\index{add\_component@{add\_component}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{add\_component()}{add\_component()}}
+{\footnotesize\ttfamily void Circuit\+::add\+\_\+component (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classComponent}{Component}} \&}]{component }\end{DoxyParamCaption})}
+
+Add \mbox{\hyperlink{classComponent}{Component}} to the circuit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & \mbox{\hyperlink{classComponent}{Component}} to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCircuit_ab624dff467c61f983c56ca77da2516f6}\label{classCircuit_ab624dff467c61f983c56ca77da2516f6}} 
+\index{Circuit@{Circuit}!get\_resistance@{get\_resistance}}
+\index{get\_resistance@{get\_resistance}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{get\_resistance()}{get\_resistance()}}
+{\footnotesize\ttfamily double Circuit\+::get\+\_\+resistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+Get the resistance of the circuit.
+
+\begin{DoxyReturn}{Returns}
+the resistance of the component. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponent_a9283a88d727a2fba8be5f10367154a08}{Component}}.
+
+
+
+Implemented in \mbox{\hyperlink{classSeries_a620c9496ffc392eda96542ebca7e5f17}{Series}}, and \mbox{\hyperlink{classParallel_ae7221cfd1591f4e7fd2c591d328a912f}{Parallel}}.
+
+\mbox{\Hypertarget{classCircuit_ae8ecee4c5943d30b6e9219c3f81b73a9}\label{classCircuit_ae8ecee4c5943d30b6e9219c3f81b73a9}} 
+\index{Circuit@{Circuit}!print@{print}}
+\index{print@{print}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Circuit\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints out information\textquotesingle{}s of the currently added components. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCircuit_a6ab377573021bfb7ae4da62c4457eea8}\label{classCircuit_a6ab377573021bfb7ae4da62c4457eea8}} 
+\index{Circuit@{Circuit}!components@{components}}
+\index{components@{components}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classComponent}{Component}} $\ast$$>$ Circuit\+::components\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/github/circuit/src/\mbox{\hyperlink{Circuit_8hpp}{Circuit.\+hpp}}\item 
+E\+:/github/circuit/src/\mbox{\hyperlink{Circuit_8cpp}{Circuit.\+cpp}}\end{DoxyCompactItemize}

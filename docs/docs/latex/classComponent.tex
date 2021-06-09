@@ -1,0 +1,89 @@
+\hypertarget{classComponent}{}\doxysection{Component Class Reference}
+\label{classComponent}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+hpp$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classComponent}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classComponent_a7e63a4b118bc00de247466c3c128e7bc}{Component}} (std\+::string \mbox{\hyperlink{classComponent_a46343549452bda5ee9752f7a9bc15efb}{name}})
+\item 
+std\+::string \mbox{\hyperlink{classComponent_a6722fbdc7bee1d67aed1e986fd5ecf43}{get\+\_\+name}} () const
+\item 
+virtual double \mbox{\hyperlink{classComponent_a9283a88d727a2fba8be5f10367154a08}{get\+\_\+resistance}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classComponent_a46343549452bda5ee9752f7a9bc15efb}{name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classComponent}{Component}} that has a name and a resistance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponent_a7e63a4b118bc00de247466c3c128e7bc}\label{classComponent_a7e63a4b118bc00de247466c3c128e7bc}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the component. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponent_a6722fbdc7bee1d67aed1e986fd5ecf43}\label{classComponent_a6722fbdc7bee1d67aed1e986fd5ecf43}} 
+\index{Component@{Component}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string Component\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the name of the component.
+
+\begin{DoxyReturn}{Returns}
+the name of the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classComponent_a9283a88d727a2fba8be5f10367154a08}\label{classComponent_a9283a88d727a2fba8be5f10367154a08}} 
+\index{Component@{Component}!get\_resistance@{get\_resistance}}
+\index{get\_resistance@{get\_resistance}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{get\_resistance()}{get\_resistance()}}
+{\footnotesize\ttfamily virtual double Component\+::get\+\_\+resistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the resistance of the component.
+
+\begin{DoxyReturn}{Returns}
+the resistance of the component. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCircuit_ab624dff467c61f983c56ca77da2516f6}{Circuit}}, \mbox{\hyperlink{classVoltageSource_a170dbf65453b33b41194f6e7dbc7db44}{Voltage\+Source}}, \mbox{\hyperlink{classSeries_a620c9496ffc392eda96542ebca7e5f17}{Series}}, \mbox{\hyperlink{classResistance_a1ec2e054edca918ee2446bb2b9df90d7}{Resistance}}, and \mbox{\hyperlink{classParallel_ae7221cfd1591f4e7fd2c591d328a912f}{Parallel}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classComponent_a46343549452bda5ee9752f7a9bc15efb}\label{classComponent_a46343549452bda5ee9752f7a9bc15efb}} 
+\index{Component@{Component}!name@{name}}
+\index{name@{name}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Component\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/github/circuit/src/\mbox{\hyperlink{Component_8hpp}{Component.\+hpp}}\item 
+E\+:/github/circuit/src/\mbox{\hyperlink{Component_8cpp}{Component.\+cpp}}\end{DoxyCompactItemize}

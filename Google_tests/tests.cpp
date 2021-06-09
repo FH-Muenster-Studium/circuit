@@ -1,11 +1,9 @@
-//
-// Created by Fabian Terhorst on 12.05.21.
-//
-
 #include "gtest/gtest.h"
 
 #include "Series.hpp"
 #include "Parallel.hpp"
+#include "Resistance.hpp"
+#include "VoltageSource.hpp"
 
 #include <random>
 
@@ -22,9 +20,9 @@ TEST (SeriesTest, Resistance) {
     double r2 = get_random_double();
     double r3 = get_random_double();
     Series series;
-    Component c1("", r1);
-    Component c2("", r2);
-    Component c3("", r3);
+    Resistance c1(r1);
+    Resistance c2(r2);
+    VoltageSource c3(r3);
     series.add_component(c1);
     series.add_component(c2);
     series.add_component(c3);
@@ -37,12 +35,35 @@ TEST (ParallelTest, Resistance) {
     double r2 = get_random_double();
     double r3 = get_random_double();
     Parallel parallel;
-    Component c1("", r1);
-    Component c2("", r2);
-    Component c3("", r3);
+    Resistance c1(r1);
+    Resistance c2(r2);
+    VoltageSource c3(r3);
     parallel.add_component(c1);
     parallel.add_component(c2);
     parallel.add_component(c3);
     double r = 1 / (1 / r1 + 1 / r2 + 1 / r3);
+    ASSERT_EQ (r, parallel.get_resistance());
+}
+
+TEST (CircuitInnerTest, Resistance) {
+    double r1 = get_random_double();
+    double r2 = get_random_double();
+    double r3 = get_random_double();
+    double r4 = get_random_double();
+    double r5 = get_random_double();
+    Parallel parallel;
+    Resistance c1(r1);
+    Resistance c2(r2);
+    VoltageSource c3(r3);
+    parallel.add_component(c1);
+    parallel.add_component(c2);
+    Series series;
+    Resistance c4(r4);
+    VoltageSource c5(r5);
+    series.add_component(c4);
+    series.add_component(c5);
+    parallel.add_component(c3);
+    parallel.add_component(series);
+    double r = 1 / (1 / r1 + 1 / r2 + 1 / r3 + 1 / (r4 + r5));
     ASSERT_EQ (r, parallel.get_resistance());
 }

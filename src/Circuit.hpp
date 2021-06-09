@@ -1,21 +1,39 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
-#ifndef PRAKTIKUM_2_CIRCUIT_HPP
-#define PRAKTIKUM_2_CIRCUIT_HPP
+#pragma once
 
 #include "Component.hpp"
 #include <vector>
+#include <memory>
 
+/**
+ * Circuit that contains a list of components.
+ */
 class Circuit : public Component {
 protected:
-    std::vector<Component> components;
+    std::vector<Component *> components;
 public:
-    explicit Circuit(const std::string& name);
-    void add_component(const Component& component);
+    /**
+     * Creates a circuit.
+     *
+     * @param name name of the circuit.
+     */
+    explicit Circuit(const std::string &name);
+
+    /**
+     * Add Component to the circuit.
+     *
+     * @param component Component to add.
+     */
+    void add_component(const Component &component);
+
+    /**
+     * Prints out information's of the currently added components.
+     */
     void print();
+
+    /**
+     * Get the resistance of the circuit.
+     *
+     * @return the resistance of the component.
+     */
+    [[nodiscard]] double get_resistance() const override = 0;
 };
-
-
-#endif //PRAKTIKUM_2_CIRCUIT_HPP

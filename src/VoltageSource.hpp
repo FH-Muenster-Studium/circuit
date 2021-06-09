@@ -1,16 +1,26 @@
-//
-// Created by Fabian Terhorst on 10.05.21.
-//
-
-#ifndef PRAKTIKUM_2_VOLTAGESOURCE_HPP
-#define PRAKTIKUM_2_VOLTAGESOURCE_HPP
+#pragma once
 
 #include "Component.hpp"
+#include "InvalidResistanceException.hpp"
 
+/**
+ * VoltageSource Component that has a name and a final resistance.
+ */
 class VoltageSource: public Component {
+private:
+    double resistance;
 public:
-    VoltageSource(double resistance);
+    /**
+     * Creates a VoltageSource with a final resistance.
+     *
+     * @param resistance resistance to set.
+     */
+    explicit VoltageSource(double resistance);
+
+    /**
+     * Get the resistance of the VoltageSource component.
+     *
+     * @return the resistance of the VoltageSource component.
+     */
+    [[nodiscard]] double get_resistance() const override;
 };
-
-
-#endif //PRAKTIKUM_2_VOLTAGESOURCE_HPP
