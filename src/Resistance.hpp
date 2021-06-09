@@ -21,4 +21,6 @@ public:
      * @return the resistance of the Resistance component.
      */
     [[nodiscard]] double get_resistance() const override;
+
+    [[nodiscard]] std::shared_ptr<Component> clone() const override;
 };

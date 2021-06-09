@@ -9,7 +9,8 @@
  */
 class Circuit : public Component {
 protected:
-    std::vector<Component *> components;
+    std::vector<std::shared_ptr<Component>> components;
+    Circuit(const std::string &name, std::vector<std::shared_ptr<Component>> components);
 public:
     /**
      * Creates a circuit.
@@ -36,4 +37,6 @@ public:
      * @return the resistance of the component.
      */
     [[nodiscard]] double get_resistance() const override = 0;
+
+    [[nodiscard]] std::shared_ptr<Component> clone() const override = 0;
 };

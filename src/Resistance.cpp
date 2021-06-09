@@ -10,3 +10,7 @@ Resistance::Resistance(double resistance): Component("Resistance") {
 double Resistance::get_resistance() const {
     return this->resistance;
 }
+
+std::shared_ptr<Component> Resistance::clone() const {
+    return std::make_shared<Resistance>(this->get_resistance());
+}

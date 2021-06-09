@@ -23,4 +23,6 @@ public:
      * @return the resistance of the VoltageSource component.
      */
     [[nodiscard]] double get_resistance() const override;
+
+    [[nodiscard]] std::shared_ptr<Component> clone() const override;
 };

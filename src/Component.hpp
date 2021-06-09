@@ -18,6 +18,8 @@ public:
      */
     explicit Component(const std::string &name);
 
+    ~Component();
+
     /**
      * Get the name of the component.
      *
@@ -31,4 +33,6 @@ public:
      * @return the resistance of the component.
      */
     [[nodiscard]] virtual double get_resistance() const = 0;
+
+    [[nodiscard]] virtual std::shared_ptr<Component> clone() const = 0;
 };

@@ -7,8 +7,12 @@ Circuit::Circuit(const std::string& name) : Component(name), components() {
 
 }
 
+Circuit::Circuit(const std::string &name, std::vector<std::shared_ptr<Component>> components): Circuit(name) {
+    this->components = components;
+}
+
 void Circuit::add_component(const Component& component) {
-    this->components.push_back(const_cast<Component*>(&component));
+    this->components.push_back(component.clone());
 }
 
 void Circuit::print() {
