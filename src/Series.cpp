@@ -1,10 +1,12 @@
 #include "Series.hpp"
 
+#include <utility>
+
 Series::Series(): Circuit("Series") {
 
 }
 
-Series::Series(std::vector<std::shared_ptr<Component>> components): Circuit("Series", components) {
+Series::Series(std::vector<std::shared_ptr<Component>> components): Circuit("Series", std::move(components)) {
 
 }
 

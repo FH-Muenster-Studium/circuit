@@ -20,12 +20,9 @@ TEST (SeriesTest, Resistance) {
     double r2 = get_random_double();
     double r3 = get_random_double();
     Series series;
-    Resistance c1(r1);
-    Resistance c2(r2);
-    VoltageSource c3(r3);
-    series.add_component(c1);
-    series.add_component(c2);
-    series.add_component(c3);
+    series.add_component(Resistance {r1});
+    series.add_component(Resistance {r2});
+    series.add_component(VoltageSource {r3});
     double r = r1 + r2 + r3;
     ASSERT_EQ (r, series.get_resistance());
 }

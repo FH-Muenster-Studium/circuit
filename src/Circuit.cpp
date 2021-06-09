@@ -2,17 +2,20 @@
 
 #include <iostream>
 #include <iomanip>
+#include <utility>
 
 Circuit::Circuit(const std::string& name) : Component(name), components() {
 
 }
 
 Circuit::Circuit(const std::string &name, std::vector<std::shared_ptr<Component>> components): Circuit(name) {
-    this->components = components;
+    for (auto& component : components) {
+        this->components.emplace_back(component->clone());
+    }
 }
 
 void Circuit::add_component(const Component& component) {
-    this->components.push_back(component.clone());
+    this->components.emplace_back(std::move(component.clone()));
 }
 
 void Circuit::print() {

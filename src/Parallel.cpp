@@ -1,10 +1,12 @@
 #include "Parallel.hpp"
 
+#include <utility>
+
 Parallel::Parallel(): Circuit("Parallel") {
 
 }
 
-Parallel::Parallel(std::vector<std::shared_ptr<Component>> components): Circuit("Parallel", components) {
+Parallel::Parallel(std::vector<std::shared_ptr<Component>> components): Circuit("Parallel", std::move(components)) {
 
 }
 
