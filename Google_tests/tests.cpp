@@ -67,3 +67,17 @@ TEST (CircuitInnerTest, Resistance) {
     double r = 1 / (1 / r1 + 1 / r2 + 1 / r3 + 1 / (r4 + r5));
     ASSERT_EQ (r, parallel.get_resistance());
 }
+
+TEST(NegativeResistanceException, invalidResistance)
+{
+    try {
+        Resistance c1(-1);
+        FAIL() << "Expected InvalidResistanceException";
+    }
+    catch(InvalidResistanceException const & err) {
+        EXPECT_EQ(err.what(),std::string("Resistance should not be negative"));
+    }
+    catch(...) {
+        FAIL() << "Expected InvalidResistanceException";
+    }
+}

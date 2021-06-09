@@ -1,6 +1,6 @@
 #include "Component.hpp"
 
-Component::Component(std::string name): name(name) {
+Component::Component(const std::string &name) : name(name) {
 
 }
 
