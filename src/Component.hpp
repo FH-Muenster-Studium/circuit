@@ -16,9 +16,7 @@ public:
      *
      * @param name name of the component.
      */
-    explicit Component(const std::string &name);
-
-    ~Component();
+    explicit Component(std::string name);
 
     /**
      * Get the name of the component.

@@ -1,15 +1,12 @@
 #include "Component.hpp"
 
 #include <iostream>
+#include <utility>
 
-Component::Component(const std::string &name) : name(name) {
+Component::Component(std::string name) : name(std::move(name)) {
 
 }
 
 std::string Component::get_name() const {
     return this->name;
-}
-
-Component::~Component() {
-    std::cout << "destruct component " << get_name() << std::endl;
 }

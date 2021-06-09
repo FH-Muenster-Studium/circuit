@@ -10,7 +10,7 @@
 class Circuit : public Component {
 protected:
     std::vector<std::shared_ptr<Component>> components;
-    Circuit(const std::string &name, std::vector<std::shared_ptr<Component>> components);
+    Circuit(const std::string &name, const std::vector<std::shared_ptr<Component>>& components);
 public:
     /**
      * Creates a circuit.
